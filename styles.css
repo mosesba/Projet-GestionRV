@@ -76,3 +76,16 @@
       border-radius: 1rem;
       font-size: 1.3vw;
   }
+  /*pour modifier  les icons  */
+  
+  .form-group i {
+      position: absolute;
+      right: 30%;
+  }
+  
+  .icon {
+      padding: 10px;
+      color: rgba(94, 94, 94, 0.952);
+      min-width: 40px;
+      text-align: center;
+  }
