@@ -66,8 +66,8 @@
   }
   
   .login-form-1 .btnSubmit {
-      font-weight: bold;
-      color: rgb(255, 254, 254);
+      font-weight: 600;
+      color: #fff;
       background-color: #177299;
   }
   
