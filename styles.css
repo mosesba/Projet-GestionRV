@@ -1,0 +1,78 @@
+  * {
+      padding: 0;
+      margin: 0;
+  }
+  
+  .login-container {
+      margin-top: 1%;
+      margin-bottom: 1%;
+  }
+  
+  .login-form-1 {
+      height: 90%;
+      padding: 10%;
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  div.col-md-6.login-form-2 {
+      background-image: url(img/img1.jpg);
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+      top: 0;
+      bottom: 0;
+      z-index: -10;
+  }
+  
+  div.color-overlay {
+      background-color: hsla(198, 74%, 35%, 0.568);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      z-index: -5;
+  }
+  
+  div.col-md-6.login-form-2 img {
+      position: absolute;
+      top: 10%;
+      left: 40%;
+      z-index: 2;
+  }
+  
+  .login-form-2 p {
+      text-align: center;
+      left: 25%;
+      top: 35%;
+      position: absolute;
+      color: #fff;
+      font-size: 2vw;
+  }
+  
+  .login-container form {
+      padding: 10%;
+  }
+  
+  .btnSubmit {
+      width: 35%;
+      border-radius: 1rem;
+      padding: 1.5%;
+      border: none;
+      cursor: pointer;
+      font-size: 1.3vw;
+  }
+  
+  .login-form-1 .btnSubmit {
+      font-weight: bold;
+      color: rgb(255, 254, 254);
+      background-color: #177299;
+  }
+  
+  input.form-control {
+      width: 80%;
+      border-radius: 1rem;
+      font-size: 1.3vw;
+  }
