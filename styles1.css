@@ -1,0 +1,131 @@
+  * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+  }
+  
+  .sidebar {
+      margin: 0;
+      padding: 0;
+      width: 230px;
+      height: 600px;
+      background-color: #177299;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+      border-radius: 0% 50% 50% 0% / 0% 50% 50% 0%;
+      box-shadow: 0 5px 8px 0 rgba(48, 48, 48, 0.2), 0 9px 26px 0 rgba(61, 61, 61, 0.205);
+  }
+  
+  .sidebar a {
+      display: block;
+      color: rgb(226, 224, 224);
+      text-decoration: none;
+      font-size: 15px;
+      margin: 10px;
+      position: relative;
+      top: 40%;
+      padding-left: 10%;
+  }
+  
+  .sidebar :hover>a {
+      text-decoration: none;
+      color: black;
+  }
+  
+  .sidebar :hover {
+      text-decoration: none;
+      color: black;
+  }
+  
+  .avatar {
+      position: absolute;
+      text-align: center;
+      color: white;
+      margin-left: 15%;
+      margin-top: 5%;
+      text-decoration: none;
+  }
+  
+  .avatar>h4 {
+      font-size: 15px;
+      margin-top: 5px;
+      font-weight: bold;
+  }
+  
+  .avatar>h5 {
+      font-size: 13px;
+  }
+  /* Sidebar Ends */
+  
+  .card {
+      box-shadow: 0 5px 8px 0 rgba(134, 134, 134, 0.116), 0 9px 26px 0 rgba(82, 81, 81, 0.13);
+  }
+  
+  .row {
+      display: flex;
+  }
+  
+  .row>div {
+      margin: 10px;
+      position: relative;
+      left: 20%;
+      top: 10%;
+  }
+  
+  .container h1 {
+      font-size: 4vw;
+      padding-left: 20%;
+  }
+  
+  .notification a {
+      position: absolute;
+      top: 5%;
+      left: 90%;
+      color: black;
+      font-size: 20px;
+  }
+  
+  .notification :hover {
+      color: #177299;
+  }
+  
+  .deconnect {
+      position: absolute;
+      bottom: 9%;
+      width: 100%;
+  }
+  
+  .deconnect a {
+      text-decoration: none;
+  }
+  /* Active/current link */
+  
+  .sidebar a.active {
+      background-color: #adadad;
+      color: white;
+  }
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  
+  @media screen and (max-width: 700px) {
+      .sidebar {
+          width: 100%;
+          height: auto;
+          position: relative;
+      }
+      .sidebar a {
+          float: left;
+      }
+      div.content {
+          margin-left: 0;
+      }
+  }
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  
+  @media screen and (max-width: 400px) {
+      .sidebar a {
+          text-align: center;
+          float: none;
+      }
+  }
