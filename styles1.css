@@ -56,6 +56,17 @@
   .avatar>h5 {
       font-size: 13px;
   }
+  
+  .deconnect {
+      position: absolute;
+      bottom: 9%;
+      width: 100%;
+  }
+  
+  .deconnect a {
+      text-decoration: none;
+      font-weight: 100;
+  }
   /* Sidebar Ends */
   
   .card {
@@ -78,33 +89,20 @@
       padding-left: 20%;
   }
   
-  .notification a {
+  .notification>button {
+      color: rgb(247, 247, 247);
+      background-color: #177299;
+      border-radius: 15px;
+      border: none;
       position: absolute;
       top: 5%;
       left: 90%;
-      color: black;
-      font-size: 20px;
   }
   
-  .notification :hover {
-      color: #177299;
-  }
-  
-  .deconnect {
-      position: absolute;
-      bottom: 9%;
-      width: 100%;
-  }
-  
-  .deconnect a {
-      text-decoration: none;
+  .notification>button :hover {
+      color: #7a7a7a;
   }
   /* Active/current link */
-  
-  .sidebar a.active {
-      background-color: #adadad;
-      color: white;
-  }
   /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
   /* On screens that are less than 700px wide, make the sidebar into a topbar */
   
