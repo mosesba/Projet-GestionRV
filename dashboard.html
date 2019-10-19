@@ -13,7 +13,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
-    <title>Homepage</title>
+    <title>Administrateur</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 
         <a href="#Home"><i class="fa fa-home" style="font-size:16px"></i> medecins</a>
         <a href="#Services"><i class='far fa-calendar-alt' style='font-size:16px'></i> Services</a>
-        <a href="#Secretaire"><i class='far fa-calendar-alt' style='font-size:16px'></i> Secretaire</a>
+        <a href="#Secretaire"><i class='far fa-user-shield' style='font-size:16px'></i> Secretaire</a>
         <span class="deconnect">
             <a href=""><i class="fa fa-cog" style="font-size:16px"></i> Déconnection</a>
         </span>
@@ -35,7 +35,7 @@
 
     <div class="container">
         <h1>Admin</h1>
-        <!-- Model Button rv -->
+        <!-- button modal formulaire ajouter medecin , secretaire ,   -->
         <div class="buttonrv">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i class='fas fa-plus'></i> Ajouter Medecin</button>
 
@@ -45,33 +45,43 @@
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Ajouter un Medecin</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+                            <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
+                        <!-- modal formulaire ajouter -->
                         <div class="modal-body">
                             <form>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="recipient-name" class="col-form-label">Nom:</label>
                                         <input type="text" class="form-control" id="recipient-name">
+                                        <!-- Validation feedback coté serveur  -->
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                        <!-- End Validation Feedback  -->
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="recipient-name" class="col-form-label">prenom:</label>
                                         <input type="text" class="form-control" id="recipient-name">
                                     </div>
+
                                     <div class="form-group col-md-6">
-                                        <label for="exampleFormControlSelect1">Medecins</label>
+                                        <label for="exampleFormControlSelect1">Specialités</label>
                                         <select class="form-control" id="exampleFormControlSelect1">
-                                                  <option>Samba Ndiaye</option>
-                                                  <option>Ousmane Dia</option>
-                                                  <option>Seydou Seck</option>
-                                                  <option>Aminata Diop</option>
-                                                  <option>Marie Sow</option>
-                                                </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="recipient-name" class="col-form-label">Services:</label>
-                                        <input type="text" class="form-control" id="recipient-name">
+                                                      <option>Odontologie</option>
+                                                      <option>Cardiologie</option>
+                                                      <option>Pédiatrie</option>
+                                                      <option>Dermatologie</option>
+                                                      <option>Neurologie</option>
+                                                      <option>Urologie</option>
+                                                      <option>Médecine interne</option>
+                                                      <option>Anesthésiologie</option>
+                                                      <option>Rhumatologie - Médecine physique</option>
+                                            </select>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">Email</label>
@@ -89,7 +99,7 @@
                 </div>
             </div>
         </div>
-        <!-- End Model button rv -->
+        <!-- End Modal formulaire ajouter button rv -->
 
 
         <!-- bouton de notification -->
@@ -102,7 +112,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th class="col-lg-1">ID</th>
+                <th class="col-sm-1">ID</th>
                 <th class="col-sm-2">Nom</th>
                 <th class="col-sm-2">Prenom</th>
                 <th class="col-sm-2">Email</th>
