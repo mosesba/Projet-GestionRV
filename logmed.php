@@ -1,9 +1,9 @@
 <?php
-
 session_start();
 require_once "dbconnect.php" ;
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +42,7 @@ require_once "dbconnect.php" ;
             <!-- separate les deux blocks  -->
 
             <div class="col-md-6 login-form-1">
-                <form method="POST" action="login.php">
+                <form method="POST" action="login_med.php" >
                     <h1 class="font-weight-bold" style="font-size: 4vw;">Sign In</h1>
                     <p class="font-weight-light" style="font-size: 1.5vw;">Veuillez entrer vos identifications</p>
                     <div class="form-group">
