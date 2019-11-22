@@ -51,8 +51,8 @@ $result= $conn->query($sql);
                 <h5></h5>
         </span>
 
-        <a href="admedecin.php"><i class="fa fa-briefcase-medical" style="font-size:16px"></i> medecins</a>
-        <a href="adservice.php"><i class='far fa-wpforms' style='font-size:16px'></i> Services</a>
+        <a href="admedecin.php"><i class="fa fa-briefcase-medical" style="font-size:16px"></i> Medecins</a>
+        <a href="adservice.php"><i class='fas fa-clinic-medical' style='font-size:16px'></i> Services</a>
         <a href="adsecretaire.php"><i class='far fa-id-badge' style='font-size:16px'></i> Secretaire</a>
         <span class="deconnect">
             <a href="logoutadmin.php"><i class="fa fa-cog" style="font-size:16px"></i> Déconnection</a>

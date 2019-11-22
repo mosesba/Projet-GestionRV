@@ -1,3 +1,14 @@
+
+<?php 
+session_start();
+require_once "dbconnect.php" ;
+$sql = "SELECT p.nom, p.prenom, s.nom_service, m.prenom, r.heure_debut,r.heure_fin, r.date, r.id_rv FROM patient p, rendez_vous r, service s, medecin m
+WHERE p.id_patient = r.id_patient AND r.id_service = s.id_service AND r.id_medecin = m.id_medecin ";
+$stmt= $conn -> query($sql);
+$rowAll= $stmt->fetchAll();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,54 +72,21 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">m-001</th>
-                    <td>Ndiaye</td>
-                    <td>Samba </td>
-                    <td>Cardiologie</td>
-                    <td>Dr.Ousmane</td>
-                    <td>02-09-2019</td>
-                    <td>8h00</td>
-                    <td>8h15</td>
-                    <td><button type="button" class="btn btn-success btn-sm">Accepter</button></td>
-                    <td><button type="button" class="btn btn-danger btn-sm">decliner</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">m-001</th>
-                    <td>Ndiaye</td>
-                    <td>Samba </td>
-                    <td>Cardiologie</td>
-                    <td>Dr.Ousmane</td>
-                    <td>02-09-2019</td>
-                    <td>8h00</td>
-                    <td>8h15</td>
-                    <td><button type="button" class="btn btn-success btn-sm">Accepter</button></td>
-                    <td><button type="button" class="btn btn-danger btn-sm">decliner</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">m-001</th>
-                    <td>Ndiaye</td>
-                    <td>Samba </td>
-                    <td>Cardiologie</td>
-                    <td>Dr.Ousmane</td>
-                    <td>02-09-2019</td>
-                    <td>8h00</td>
-                    <td>8h15</td>
-                    <td><button type="button" class="btn btn-success btn-sm">Accepter</button></td>
-                    <td><button type="button" class="btn btn-danger btn-sm">decliner</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">m-001</th>
-                    <td>Ndiaye</td>
-                    <td>Samba </td>
-                    <td>Cardiologie</td>
-                    <td>Dr.Ousmane</td>
-                    <td>02-09-2019</td>
-                    <td>8h00</td>
-                    <td>8h15</td>
-                    <td><button type="button" class="btn btn-success btn-sm">Accepter</button></td>
-                    <td><button type="button" class="btn btn-danger btn-sm">decliner</button></td>
-                </tr>
+               <?php foreach ($rowAll as $row ){?>
+        <tr>
+            <th scope="row"><?= $row['id_rv']; ?></th>
+            <td><?= $row['nom'];?></td>
+            <td><?= $row['prenom'];?></td>
+            <td><?= $row['nom_service'];?></td>
+            <td><?= $row['prenom'];?></td>
+            <td><?= $row['date'];?></td>
+            <td><?= $row['heure_debut'];?></td>
+            <td><?= $row['heure_fin'];?></td>
+
+            <td><a href="rvsecform.php?delete=<?= $row['id_rv']; ?>"
+             class="btn btn-danger btn-sm">supprimer</a></td>
+        </tr>
+    <?php } ?>
             </tbody>
         </table>
     </div>

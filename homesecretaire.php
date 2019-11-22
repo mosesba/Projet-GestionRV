@@ -6,12 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles1.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
- <!-- ----------------------------------------------------------------------------------------------  -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
- <!-- ----------------------------------------------------------------------------------------------  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
- <!-- ----------------------------------------------------------------------------------------------  -->
+  <!-- ----------------------------------------------------------------------------------------------  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
  <!-- ----------------------------------------------------------------------------------------------  -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -34,6 +29,7 @@
 
         <a href="homesecretaire.php"><i class="fa fa-home" style="font-size:16px"></i> Home</a>
         <a href="rvsecretaire.php"><em class='far fa-calendar-alt' style='font-size:16px'></em> rendez-vous</a>
+        <a href="patient.php"><i class='far fa-calendar-alt' style='font-size:16px'></i> liste patient</a>
         <span class="deconnect">
             <a href="logoutsec.php"><em class="fa fa-cog" style="font-size:16px"></em> Déconnection</a>
         </span>
@@ -72,6 +68,17 @@
 
     </div>
 
+
+
+
+
+    
+ <!-- ----------------------------------------------------------------------------------------------  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <!-- ----------------------------------------------------------------------------------------------  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+ <!-- ----------------------------------------------------------------------------------------------  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 </body>
 
 </html>

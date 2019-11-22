@@ -3,7 +3,6 @@
  *  Save into database and display on table stament
  */
 
-
 if (isset($_POST['submit'])) {
    
     if (empty($_POST['prenom'])) {
@@ -73,17 +72,6 @@ if (isset($_POST['submit'])) {
             $sql->execute();
 
             header ("location: adsecretaire.php");       
-
-        
-
-
-         
-      //  $sql->execute();
-      
-// notification session
-        
-
-     //   header ("location: adsecretaire.php");
         
     }
 }
@@ -92,19 +80,17 @@ if (isset($_POST['submit'])) {
  *  Delete on table treatment
  */
 
-if(isset($_GET['delete'])){
+if(isset($_GET['delete'])) {
     $id=$_GET['delete'];
     require_once 'dbconnect.php';
 
-    
-    $sql = "DELETE FROM secretaire WHERE  = $id";
+    $sql = "DELETE FROM secretaire WHERE id_secretaire = $id";
     $sql = $conn->prepare($sql);
     $sql->bindParam(':id_secretaire', $_GET['delete'], PDO::PARAM_INT);   
     $sql->execute();
 // notification session
     $_SESSION['message'] = "record has been saved";
     $_SESSION['msg_type'] = "danger";
-
 
     header ("location: adsecretaire.php");
 }

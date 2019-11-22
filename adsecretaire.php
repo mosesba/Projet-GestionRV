@@ -1,10 +1,9 @@
 <?php 
 
 require_once "dbconnect.php" ;
-$sql = "SELECT * FROM secretaire";
-$result= $conn->query($sql);
-
-
+$sql = "SELECT s.id_secretaire, s.prenom,s.nom,s.email,s.telephone,s.passwd,se.nom_service FROM secretaire s, service se WHERE s.id_service=se.id_service";
+$stmt= $conn -> query($sql);
+$rowAll= $stmt->fetchAll();
 
 ?>
 <!DOCTYPE html>
@@ -42,8 +41,8 @@ $result= $conn->query($sql);
                 <h5></h5>
         </span>
 
-        <a href="admedecin.php"><i class="fa fa-briefcase-medical" style="font-size:16px"></i> medecins</a>
-        <a href="adservice.php"><i class='far fa-wpforms' style='font-size:16px'></i> Services</a>
+        <a href="admedecin.php"><i class="fa fa-briefcase-medical" style="font-size:16px"></i> Medecins</a>
+        <a href="adservice.php"><i class='fas fa-clinic-medical' style='font-size:16px'></i> Services</a>
         <a href="adsecretaire.php"><i class='far fa-id-badge' style='font-size:16px'></i> Secretaire</a>
         <span class="deconnect">
             <a href="logoutadmin.php"><i class="fa fa-cog" style="font-size:16px"></i> Déconnection</a>
@@ -117,8 +116,7 @@ $result= $conn->query($sql);
                                                 ?>         
                                         </select>
                                     </div>
-                                
-                                    
+                                   
                                 </div>
                         </div>
                         
@@ -134,11 +132,6 @@ $result= $conn->query($sql);
         <!-- End Modal formulaire ajouter button rv -->
 
 
-        <!-- bouton de notification -->
-        <button type="button" class="btn btn-primary">
-            <i class="fas fa-bell"></i> <span class="badge badge-light">4</span>
-           </button>
-        <!-- fin bouton de notification -->
     </div>
     <!-- table -->
     <table class="table">
@@ -155,21 +148,21 @@ $result= $conn->query($sql);
             </tr>
         </thead>
         <tbody>
-        <?php while ($row = $result->fetch()):?>
-           
-            <tr>
-                <th scope="row"><?php echo $row['id_secretaire']; ?></th>
-                <td><?php echo $row['prenom'];?></td>
-                <td><?php echo $row['nom'];?></td>
-                <td><?php echo $row['email'];?></td>
-                <td><?php echo $row['telephone'];?></td>
-                <td><?php echo $row['passwd'];?></td>
-                <td><?php echo $row['id_service'];?></td>
-                <td><a href="secform.php?delete=<?php echo $row['id_secretaire']; ?>"
-                class="btn btn-danger btn-sm">supprimer</a></td>
-            </tr>
-        <?php endwhile; ?>
-        
+        <?php foreach ($rowAll as $row ){?>
+        <tr>
+            <th scope="row"><?php echo $row['id_secretaire']; ?></th>
+            <td><?php echo $row['prenom'];?></td>
+            <td><?php echo $row['nom'];?></td>
+            <td><?php echo $row['email'];?></td>
+            <td><?php echo $row['telephone'];?></td>
+            <td><?php echo $row['passwd'];?></td>
+            <td><?php echo $row['nom_service'];?></td>
+            <td><a href="secform.php?delete=<?php echo $row['id_secretaire']; ?>"
+             class="btn btn-danger btn-sm">supprimer</a></td>
+        </tr>
+<?php } ?>
+
+
         </tbody>
     </table>
     </div>
